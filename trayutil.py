@@ -16,6 +16,7 @@ import subprocess
 from PyQt5 import QtGui, QtWidgets
 
 
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 CONFIG_DIR = os.path.join(os.path.expanduser("~"), ".config", "trayutil")
 MENU_PATH = os.path.join(CONFIG_DIR, "menu.json")
 
@@ -64,7 +65,9 @@ class TrayUtil(QtWidgets.QSystemTrayIcon):
 def main(menu_path, args):
     app = QtWidgets.QApplication(args)
 
-    tu = TrayUtil(menu_path, QtGui.QIcon("./tray.png"))
+    tu = TrayUtil(menu_path,
+        QtGui.QIcon(os.path.join(SCRIPT_DIR, "tray.png"))
+    )
     tu.show()
     
     sys.exit(app.exec_())
