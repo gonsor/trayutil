@@ -12,6 +12,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 import os
 import json
 import subprocess
+from collections import OrderedDict
 
 from PyQt5 import QtGui, QtWidgets
 
@@ -41,7 +42,7 @@ class TrayUtil(QtWidgets.QSystemTrayIcon):
 
     def fillMenu(self, menu, config):
         with open(config, "r") as f:
-            structure = json.load(f)
+            structure = json.load(f, object_pairs_hook=OrderedDict)
 
         def walk(submenu, node):
             for k, v in node.items():
