@@ -46,7 +46,7 @@ class TrayUtil(QtWidgets.QSystemTrayIcon):
 
         def walk(submenu, node):
             for k, v in node.items():
-                if type(v) is dict:
+                if type(v) is OrderedDict:
                     submenu = submenu.addMenu(k)
                     walk(submenu, v)
                     submenu = submenu.parentWidget()
