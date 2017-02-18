@@ -1,0 +1,7 @@
+{
+    "Hello World": "notify-send 'Hello World!' 'Hello World.' --icon=dialog-information",
+    "Power": {
+        "Reboot": "systemctl reboot",
+        "Poweroff": "systemctl poweroff"
+    }
+}

@@ -5,7 +5,7 @@ one-click menu entries.
 
 ## Usage
 
-Either supply a menu.json file as a program parameter or create a ~/.config/trayutil/menu.json file.
+Either supply a **menu.json** file as a program parameter or create a **~/.config/trayutil/menu.json** file.
 
 ## Example menu.json
 
