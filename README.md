@@ -21,4 +21,4 @@ Every _"name": "command"_ entry in the json file creates a new menu entry that e
 
 **Result**
 
-![Example Menu](https://github.com/gonsor/trayutil/blob/master/screenshot.png)
+![Example Menu](https://github.com/gonsor/trayutil/blob/master/example/screenshot.png)
